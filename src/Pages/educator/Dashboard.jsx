@@ -45,8 +45,8 @@ const Dashboard = () => {
           </div>
            
           <div>
-            <h2 className='pb-4 text-lg font-medium'>Latest Enrollments</h2>
-            <div className='flex flex-col max-w-4xl w-full overflow-hidden rounded-md bg-white border border-gray-500/20'>
+            <h2 className='pb-4 text-lg text-black font-medium'>Latest Enrollments</h2>
+            <div className='flex flex-col max-w-4xl w-full overflow-hidden rounded-md bg-white border border-black'>
             <table className='table-fixed md:table-auto w-full overflow-hidden'>
               <thead className='text-gray-900 border-b border-gray-500/20 text-sm text-left'>
               <tr>
