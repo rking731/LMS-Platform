@@ -47,12 +47,19 @@ import profile_img3 from './profile_img3.png'
 import lesson_icon from './lesson_icon.svg'
 import logo_black from './logo-black.png'
 import logo_white from './logo-white.png'
+import day from './day.png'
+import sun from './sun.png'
+import night from './night.png'
+
 
 
 export const assets = {
     logo,
     logo_black,
     logo_white,
+    day,
+    sun,
+    night,
     search_icon,
     sketch,
     microsoft_logo,

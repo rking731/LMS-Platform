@@ -3,7 +3,12 @@ import { assets, dummyEducatorData } from '../../assets/assets'
 import { UserButton, useUser } from '@clerk/clerk-react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({theme,setTheme}) => {
+
+  const toggle_mode = () => {
+    theme == 'light' ? setTheme('dark') : setTheme('light')
+  }
+
   const educatorData = dummyEducatorData
   const {user} = useUser()
   return (
@@ -14,6 +19,7 @@ const Navbar = () => {
        <div className='flex items-center gap-5 text-gray-500 relative'>
         <p>Hi! {user ? user.fullName : 'Developers'}</p>
         {user ? <UserButton /> : <img className='max-w-8' src={assets.profile_img} />}
+        <img onClick={()=>{toggle_mode()}} src={theme== 'light' ? assets.night : assets.sun } alt="day" className='w-6 lg:w-9' />
        </div>
     </div>
   )

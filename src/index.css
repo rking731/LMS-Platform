@@ -3,7 +3,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
 
 *{
   font-family: Outfit;
@@ -30,14 +29,9 @@
     font-size: 36px;
     line-height: 44px;
   }
-  body.light {
-    background-color: #ffffff;
-    color: #000000;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
   
-  body.dark {
-    background-color: #121212;
+  .dark {
+    background-color: #78b5cc;
     color: #ffffff;
     transition: background 0.3s ease, color 0.3s ease;
   }

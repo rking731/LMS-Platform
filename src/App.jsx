@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Routes, useMatch } from 'react-router-dom'
 import Home from './Pages/student/Home'
 import CoursesList from './Pages/student/CoursesList'
@@ -15,11 +15,12 @@ import Navbar from './components/student/Navbar'
 import "quill/dist/quill.snow.css";
 const App = () => {
 
+  const [theme,setTheme] = useState('light');
   const isEducatorRoute = useMatch('/educator/*');
   return (
     
-    <div className='text-default min-h-screen bg-white'>
-      {!isEducatorRoute &&  <Navbar /> }
+    <div className={`text-default min-h-screen bg-white ${theme} transition-colors`}>
+      {!isEducatorRoute &&  <Navbar theme={theme} setTheme={setTheme} /> }
      
       <Routes>
         <Route path='/' element={<Home />} />
@@ -29,7 +30,7 @@ const App = () => {
         <Route path='/my-enrollments' element={<MyEnrollments />} />
         <Route path='/player/:courseId' element={<Player />} />
         <Route path='/loading/:path' element={<Loading />} />
-         <Route path='/educator' element={<Educator />} >
+         <Route path='/educator' element={<Educator theme={theme} setTheme={setTheme} />} >
           <Route path='/educator' element={<Dashboard />} />
           <Route path='my-courses' element={<MyCourses />} />
           <Route path='add-course' element={<AddCourse />} />

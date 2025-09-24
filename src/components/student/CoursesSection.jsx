@@ -19,7 +19,7 @@ const CoursesSection = () => {
       </div>
 
        <Link to={'/course-list'} onClick={()=> scrollTo(0,0)} 
-       className='text-black border border-black/30 hover:bg-blue-700 hover:text-white  px-10 py-3 rounded'>Show all courses</Link>
+       className='text-black border border-gray-800/50 hover:bg-blue-700 hover:text-white  px-10 py-3 rounded'>Show all courses</Link>
     </div>
   )
 }
